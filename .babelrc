@@ -1,0 +1,27 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "~": "./src",
+          "~components": "./src/components",
+          "~pages": "./src/pages",
+          "~constants": "./src/constants",
+          "~api": "./src/pages/api",
+          "~hooks": "./src/hooks"
+        }
+      }
+    ],
+    [
+      "styled-components",
+      {
+        "ssr": true,
+        "displayName": true,
+        "preprocess": true
+      }
+    ]
+  ]
+}
