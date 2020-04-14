@@ -1,15 +1,15 @@
 export const light = {
   colorSet: {
     background: '#F2E7DC',
-    'background-sub': '#DBDBDB',
+    backgroundSub: '#DBDBDB',
     text: '#011640',
-    'text-sub': '#080826',
-    'emphasize-1': '#F2C641',
-    'emphasize-1-sub': '#D1AA38',
-    'emphasize-2': '#D9BD9C',
-    'emphasize-2-sub': '#D1D0CF',
-    'emphasize-3': '#F2856D',
-    'emphasize-3-sub': '#D6A095',
+    textSub: '#080826',
+    firstColor: '#F2C641',
+    firstColorSub: '#D1AA38',
+    secondColor: '#D9BD9C',
+    secondColorSub: '#D1D0CF',
+    thirdColor: '#F2856D',
+    thirdColorSub: '#D6A095',
   },
 };
 
