@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { useState, useEffect, useMemo } from 'react';
 
-interface FakeScroll {
+interface ScrollProgressBar {
   height?: number;
+  onChange?(height: number): void;
 }
 
 const styledPack = {
@@ -15,9 +16,9 @@ const styledPack = {
     right: 0;
     top: 0;
   `,
-  FakeScroll: styled.div.attrs<FakeScroll>(({ height = 0 }) => ({
+  ProgressBar: styled.div.attrs<ScrollProgressBar>(({ height = 0 }) => ({
     style: { height: `${height}%` },
-  }))<FakeScroll>`
+  }))<ScrollProgressBar>`
     width: 100%;
     ${({
       theme: {
@@ -31,12 +32,15 @@ const styledPack = {
   `,
 };
 
-const FakeScroll = () => {
+const ScrollProgressBar = ({ onChange }: ScrollProgressBar) => {
   const [height, setHeight] = useState<number>(0);
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  useEffect(() => {
+    if (onChange) onChange(height);
+  }, [height]);
 
   const handleScroll = () => {
     const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
@@ -51,9 +55,9 @@ const FakeScroll = () => {
 
   return (
     <styledPack.Wrapper>
-      <styledPack.FakeScroll height={height} />
+      <styledPack.ProgressBar height={height} />
     </styledPack.Wrapper>
   );
 };
 
-export default FakeScroll;
+export default ScrollProgressBar;
