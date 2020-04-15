@@ -11,6 +11,8 @@ const styledPack = {
     width: 8px;
     height: 105vh;
 
+    display: flex;
+
     position: fixed;
 
     right: 0;
