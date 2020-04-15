@@ -11,6 +11,8 @@ interface Props {
 }
 
 const StyledContents = styled.article`
+  padding: 40px;
+  display: flex;
   width: 100vw;
   min-height: 100vh;
 `;
