@@ -2,7 +2,7 @@ const dark = {
   colorSet: {
     background: '#2B2D38',
     backgroundSub: '#303551',
-    text: '#F2EAE3',
+    text: '#F4F4F4',
     textSub: '#FFDEC9',
     firstColor: '#7D7383',
     firstColorSub: '#8A6F9B',

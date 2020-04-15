@@ -1,6 +1,6 @@
 export const light = {
   colorSet: {
-    background: '#F2E7DC',
+    background: '#F4F4F4',
     backgroundSub: '#DBDBDB',
     text: '#011640',
     textSub: '#080826',
