@@ -1,4 +1,4 @@
-import { ReactChild } from 'react';
+import { ReactNode } from 'react';
 import styled from 'styled-components';
 
 type DirectionType = 'column' | 'row';
@@ -7,7 +7,7 @@ interface Props {
 }
 
 interface Props {
-  children?: ReactChild;
+  children?: ReactNode;
 }
 
 const StyledContents = styled.article`
